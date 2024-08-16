@@ -1,10 +1,10 @@
-import { Router } from 'express'
+import { Router } from 'express';
+import * as indexCtrl from '../controllers/index.js';
 
-const router = Router()
+const router = Router();
 
-// GET localhost:3000/
-router.get('/', function(req, res) {
-  res.render('index')
-})
+router.get('/', indexCtrl.index);
 
-export { router }
+export {
+  router
+};
